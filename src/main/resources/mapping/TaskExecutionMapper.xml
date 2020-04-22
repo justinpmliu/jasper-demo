@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.jasperdemo.mapper.TaskExecutionMapper">
+    <resultMap id="taskExecution" type="com.example.jasperdemo.model.TaskExecution"/>
+
+    <select id="findAll" resultMap="taskExecution">
+        select task_execution_id, task_name, start_time, end_time, exit_code
+        from task.TASK_EXECUTION
+    </select>
+</mapper>
